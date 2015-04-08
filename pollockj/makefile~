@@ -1,0 +1,7 @@
+CC = /usr/bin/gcc
+
+default: calendar
+
+calendar: $(CC) -o calendar calendar4.o 
+
+calendar.o: $(CC) -c -o calendar.o calendar.c
