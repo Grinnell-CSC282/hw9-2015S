@@ -1,0 +1,10 @@
+CFLAGS = -g -Wall
+CC = /usr/bin/gcc
+
+default: sup-prob3
+
+sup-prob3: 
+        gcc -o sup-prob3 sup-prob3.c
+
+clean:
+        rm -f *.o sup-prob3

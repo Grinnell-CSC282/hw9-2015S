@@ -1,0 +1,11 @@
+I used my supplementary problem 3 from CSC161. I used sup-prob3 as the
+default for make to run. I also added a clean function that removes all the
+.o files from sup-prob3. 
+
+When make is inputted into the terminal screen, it compiles sup-prob3. And
+when I call make sup-prob3 again, it states that 'sup-prob3' is up to
+date. 
+
+Instead of typing all the compiling words into the terminal each time we
+want to compile, all we have to do is call the make procedure and it
+remembers the call for us. 
