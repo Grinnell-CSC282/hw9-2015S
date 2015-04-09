@@ -1,0 +1,5 @@
+
+#/bin/bash
+cc -c -o squaresInterface.o squaresInterface.c
+cc -c -o squareIt.o squareIt.c
+cc -o squareItAll squaresInterface.o squareIt.o
