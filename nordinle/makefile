@@ -18,6 +18,3 @@ devurandom.o: devurandom.c
 
 clean:
 	rm -f *.o driver 
-
-test: driver
-	./driver
