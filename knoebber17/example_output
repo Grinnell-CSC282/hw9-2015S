@@ -1,0 +1,71 @@
+Script started on Mon 02 Mar 2015 04:58:22 PM CST
+householder$ make
+gcc -c server.c -I/usr/include/nacl
+gcc -c client.c -I/usr/include/nacl 
+gcc -c devurandom.c
+gcc -c display_bytes.c
+gcc -o com main.c server.o client.o devurandom.o display_bytes.o  -lnacl
+householder$ com
+------------------------------
+Client: 
+------------------------------
+Initial verification Message: 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+3f ce 7f 2b 9f fa 15 3a 18 92 82 e2 9c 9f 73 43
+3b d5 d9 b2 ca 56 ce 6d 41 2b fb 2d a3 f3 eb bc
+81 70 5a df 41 62 12 19 ce c6 20 d3 6d b0 f4 b4
+33 b4 8f 1f f1 80 30 75 
+
+------------------------------
+Server: 
+------------------------------
+Decrypted client verification: 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+3f ce 7f 2b 9f fa 15 3a 18 92 82 e2 9c 9f 73 43
+3b d5 d9 b2 ca 56 ce 6d 41 2b fb 2d a3 f3 eb bc
+81 70 5a df 41 62 12 19 ce c6 20 d3 6d b0 f4 b4
+33 b4 8f 1f f1 80 30 75 
+
+Retrieved clients public key
+Encrypted response for client to verify at 1425337106 seconds
+
+------------------------------
+Client: 
+------------------------------
+Sucessfully decrypted server verification response
+Original N1: 
+3f ce 7f 2b 9f fa 15 3a 18 92 82 e2 9c 9f 73 43
+3b d5 d9 b2 ca 56 ce 6d 
+
+N1 retrieved from server: 
+3f ce 7f 2b 9f fa 15 3a 18 92 82 e2 9c 9f 73 43
+3b d5 d9 b2 ca 56 ce 6d 
+
+N1 verified
+N2 retrieved from server at 1425337106 seconds
+Verification complete
+
+Question for the server: What is the square root of 49?  
+Successfully encrypted question for server
+
+------------------------------
+Server: 
+------------------------------
+Decrypted client question
+N2 verified
+Retrieved question: 
+
+'What is the square root of 49?'
+
+Response: t The ans       It is seven  . 
+Encrypted answer for client
+
+N3 verified
+The decrypted answer is:  It is seven. 
+
+householder$ exit
+exit
+
+Script done on Mon 02 Mar 2015 04:58:46 PM CST
