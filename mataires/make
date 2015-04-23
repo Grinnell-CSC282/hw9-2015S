@@ -1,0 +1,11 @@
+CFLAGS = -std=c99
+CC = /usr/bin/gcc
+
+default: memwaste
+
+memwaste: memwaste.o
+	$(CC) $(CFLAGS) -o memwaste memwaste.o
+memwaste.o: memwaste.c
+	$(CC) $(CFLAGS) -c -o memwaste.o memwaste.c
+clean: 
+	rm -f *.o memwaste
